@@ -1,3 +1,5 @@
+# Insert this code in a QGIS Python Action applied to a polygonal layer
+
 from qgis.gui import QgsMapToolEmitPoint
 from qgis.utils import iface
 import webbrowser, math
@@ -14,9 +16,9 @@ def transform_crs(lon1, lat1, epsg1=3857, epsg2=4326):
     return((lon, lat))
 
 def get_google_bearing(ang) :
-    ang2 = ang - 90 # + 90° à cause de google. 0° sur Google correspond à 90°
+    ang2 = ang - 90 # + 90Â° Ã  cause de google. 0Â° sur Google correspond Ã  90Â°
     ang3 = -ang2
-    delta = abs((180 - abs(ang3))) # différence par rapport au Sud
+    delta = abs((180 - abs(ang3))) # diffÃ©rence par rapport au Sud
     
     if ang3 > 180  :
         ang4 = -180 + delta
